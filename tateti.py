@@ -97,7 +97,7 @@ casilleroC3 = "0"
 
 listaCasilleros = [casilleroA1, casilleroA2, casilleroA3, casilleroB1, casilleroB2, casilleroB3, casilleroC1, casilleroC2, casilleroC3]
 
-print ("inicio                   ", listaCasilleros)
+print("inicio                   ", listaCasilleros)
 #print (listaCadena(listaCasilleros))
 cadenaBase3 = listaCadena(listaCasilleros)
 #print (conversorBase3Base10(cadenaBase3))
@@ -113,7 +113,7 @@ cadenaBase3 = listaCadena(listaCasilleros)
 casilleroB2 = "1"
 # ACTUALIZAR LISTA
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("primer movimiento ajeno  ", listaCasilleros)
+print("primer movimiento ajeno  ", listaCasilleros)
 #print (listaCadena(listaCasilleros))
 cadenaBase3 = listaCadena(listaCasilleros)
 #print (conversorBase3Base10(cadenaBase3))
@@ -121,10 +121,11 @@ cadenaBase3 = listaCadena(listaCasilleros)
 # PROPIO
 if conversorBase3Base10(cadenaBase3) == 81:
     casilleroC3 = "2"
-else: casilleroB2 = "2"
+else:
+    casilleroB2 = "2"
 
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("primer movimiento propio ", listaCasilleros)
+print("primer movimiento propio ", listaCasilleros)
 #print (listaCadena(listaCasilleros))
 cadenaBase3 = listaCadena(listaCasilleros)
 #print (conversorBase3Base10(cadenaBase3))
@@ -138,7 +139,7 @@ cadenaBase3 = listaCadena(listaCasilleros)
 casilleroA1 = "1"
 # ACTUALIZAR LISTA
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("segundo movimiento ajeno ", listaCasilleros)
+print("segundo movimiento ajeno ", listaCasilleros)
 #print (listaCadena(listaCasilleros))
 cadenaBase3 = listaCadena(listaCasilleros)
 #print (conversorBase3Base10(cadenaBase3))
@@ -154,7 +155,7 @@ match tableroEnDecimales:
     case tableroEnDecimales if tableroEnDecimales == 86: casilleroA2 = "2"                 
 
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("segundo movimiento propio", listaCasilleros)
+print("segundo movimiento propio", listaCasilleros)
 #print (listaCadena(listaCasilleros))
 cadenaBase3 = listaCadena(listaCasilleros)
 #print (conversorBase3Base10(cadenaBase3))
@@ -176,7 +177,7 @@ match tableroEnDecimales:
     case tableroEnDecimales if tableroEnDecimales == 166: casilleroC1 = "2"
     
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("segundo movimiento propio", listaCasilleros)
+print("segundo movimiento propio", listaCasilleros)
 #print (listaCadena(listaCasilleros))
 cadenaBase3 = listaCadena(listaCasilleros)
 #print (conversorBase3Base10(cadenaBase3))
@@ -197,10 +198,10 @@ match tableroEnDecimales:
 # MODIFICAR VARIABLE -----> VÍA INTERFAZ GRÁFICA
 casilleroA2 = "1"
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("tercer movimiento ajeno  ", listaCasilleros)
+print("tercer movimiento ajeno  ", listaCasilleros)
 
 # PROPIO
-# PARA GANAR 
+# PARA GANAR
 if casilleroA1 == "0" and casilleroA2 == "2" and casilleroA3 == "2": 
     casilleroA1 = "2"
 elif casilleroA1 == "2" and casilleroA2 == "0" and casilleroA3 == "2": casilleroA2 = "2"
@@ -235,7 +236,7 @@ elif casilleroC1 == "2" and casilleroB2 == "0" and casilleroA3 == "2": casillero
 elif casilleroC1 == "2" and casilleroB2 == "2" and casilleroA3 == "0": casilleroA3 = "2"
 
 listaCasilleros = actualizaLista(listaCasilleros)
-print ("tercer movimiento propio ", listaCasilleros)
+print("tercer movimiento propio ", listaCasilleros)
 
 # MOVIMIENTO RESIDUAL  
 """""
@@ -263,9 +264,7 @@ contadorDeDos = 0
 for str in listaCasilleros:
     if str == "2":
         contadorDeDos = contadorDeDos + 1
-    
-print ("contidad de movimientos propios: ", contadorDeDos)
-
+print("contidad de movimientos propios: ", contadorDeDos)
 
 if contadorDeDos < 3:
     if casilleroA1 == "0":
@@ -293,5 +292,3 @@ elif casilleroA3 == "2" and casilleroB3 == "2" and casilleroC3 == "2": print ("I
 elif casilleroA1 == "2" and casilleroB2 == "2" and casilleroC3 == "2": print ("I WON!")
 elif casilleroC1 == "2" and casilleroB2 == "2" and casilleroA3 == "2": print ("I WON!")  
 else: print ("empatamos :(")
-
-
