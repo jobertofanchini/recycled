@@ -10,21 +10,18 @@ while ingresoParticipante:
     except Exception:
         print("El monto ingresado es inválido. Se lo tomará como 0.")
         montoPagado = 0
-    
-    dictInicial[participante] = montoPagado
-
-    totalAsado += montoPagado
-    divisorPromedio += 1
-    montoPromedio = totalAsado / divisorPromedio
-    
+        dictInicial[participante] = montoPagado
+        totalAsado += montoPagado
+        divisorPromedio += 1
+        montoPromedio = totalAsado / divisorPromedio
     while True:
         continuarIngreso = input("¿Desea agregrar otro participante? S/N: ").lower()
         if continuarIngreso == "n":
             ingresoParticipante = False
             break
         elif continuarIngreso == "s":
-            break
-      
+            break   
+
 dictDeudores = {}
 dictAcreedores = {}
 
